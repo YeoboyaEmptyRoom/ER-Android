@@ -13,4 +13,7 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "EmptyRoom"
-include ':app'
+include(":app")
+include(":data")
+include(":domain")
+include(":presentation")
