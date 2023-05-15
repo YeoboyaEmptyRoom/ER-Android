@@ -1,6 +1,7 @@
 plugins {
     id(Dependency.Gradle.KOTLIN)
     id(Dependency.Gradle.LIBRARY)
+    kotlin(Dependency.Gradle.KAPT)
 }
 
 android {
@@ -37,4 +38,6 @@ dependencies {
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
+    implementation(Dependency.Google.HILT)
+    kapt(Dependency.Google.HILT_COMPILER)
 }

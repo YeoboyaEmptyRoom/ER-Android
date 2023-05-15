@@ -19,4 +19,6 @@ object Versions {
     const val ESPRESSO = "3.4.0"
 
     const val MATERIAL = "1.8.0"
+
+    const val HILT = "2.44"
 }
