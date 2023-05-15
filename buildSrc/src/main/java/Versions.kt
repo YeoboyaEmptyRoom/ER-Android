@@ -8,7 +8,7 @@ object Versions {
     const val MINSDK = 24
     const val TARGETSDK = 33
 
-    val JAVA_VERSION = JavaVersion.VERSION_1_8
+    val JAVA_VERSION = JavaVersion.VERSION_11
 
     const val CORE_KTX = "1.8.0"
     const val APPCOMPAT = "1.4.1"
