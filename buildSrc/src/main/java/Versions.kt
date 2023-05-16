@@ -8,7 +8,7 @@ object Versions {
     const val MINSDK = 24
     const val TARGETSDK = 33
 
-    val JAVA_VERSION = JavaVersion.VERSION_1_8
+    val JAVA_VERSION = JavaVersion.VERSION_11
 
     const val CORE_KTX = "1.8.0"
     const val APPCOMPAT = "1.4.1"
@@ -19,4 +19,9 @@ object Versions {
     const val ESPRESSO = "3.4.0"
 
     const val MATERIAL = "1.8.0"
+
+    const val HILT = "2.44"
+
+    const val RETROFIT = "2.9.0"
+    const val OKHTTP = "4.10.0"
 }

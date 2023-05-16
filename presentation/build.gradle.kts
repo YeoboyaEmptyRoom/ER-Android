@@ -1,6 +1,7 @@
 plugins {
     id(Dependency.Gradle.KOTLIN)
     id(Dependency.Gradle.LIBRARY)
+    kotlin(Dependency.Gradle.KAPT)
 }
 
 android {
@@ -26,7 +27,7 @@ android {
         targetCompatibility = Versions.JAVA_VERSION
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
 }
 
@@ -37,4 +38,6 @@ dependencies {
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
+    implementation(Dependency.Google.HILT)
+    kapt(Dependency.Google.HILT_COMPILER)
 }
