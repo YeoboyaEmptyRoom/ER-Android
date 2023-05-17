@@ -2,6 +2,7 @@ plugins {
     id(Dependency.Gradle.KOTLIN)
     id(Dependency.Gradle.LIBRARY)
     kotlin(Dependency.Gradle.KAPT)
+    id(Dependency.Gradle.HILT)
 }
 
 android {
@@ -32,9 +33,15 @@ android {
 }
 
 dependencies {
+    implementation(project(":domain"))
+
     implementation(Dependency.AndroidX.CORE_KTX)
     implementation(Dependency.AndroidX.APPCOMPAT)
     implementation(Dependency.Google.MATERIAL)
+    implementation(Dependency.AndroidX.CONSTRAINT_LAYOUT)
+    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("com.google.android.material:material:1.5.0")
+    implementation("androidx.constraintlayout:constraintlayout:2.1.4")
     testImplementation(Dependency.Test.JUNIT)
     androidTestImplementation(Dependency.Test.ANDROID_JUNIT)
     androidTestImplementation(Dependency.Test.ESPRESSO)
