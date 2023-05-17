@@ -2,6 +2,7 @@ plugins {
     id(Dependency.Gradle.KOTLIN)
     id(Dependency.Gradle.LIBRARY)
     kotlin(Dependency.Gradle.KAPT)
+    id(Dependency.Gradle.HILT)
 }
 
 android {
