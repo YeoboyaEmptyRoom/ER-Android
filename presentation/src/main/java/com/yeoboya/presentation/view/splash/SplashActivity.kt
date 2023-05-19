@@ -1,10 +1,11 @@
-package com.yeoboya.presentation.view
+package com.yeoboya.presentation.view.splash
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import com.yeoboya.presentation.R
+import com.yeoboya.presentation.view.sign_in.SignInActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
