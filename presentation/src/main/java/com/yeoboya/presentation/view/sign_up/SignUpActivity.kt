@@ -1,4 +1,4 @@
-package com.yeoboya.presentation.view
+package com.yeoboya.presentation.view.sign_up
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

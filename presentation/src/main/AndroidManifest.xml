@@ -3,13 +3,13 @@
 
     <application>
         <activity
-            android:name=".view.SignUpActivity"
+            android:name=".view.sign_up.SignUpActivity"
             android:exported="false" />
         <activity
-            android:name=".view.SignInActivity"
+            android:name=".view.sign_in.SignInActivity"
             android:exported="false" />
         <activity
-            android:name=".view.SplashActivity"
+            android:name=".view.splash.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

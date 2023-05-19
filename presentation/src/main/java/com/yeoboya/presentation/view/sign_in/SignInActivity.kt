@@ -1,10 +1,10 @@
-package com.yeoboya.presentation.view
+package com.yeoboya.presentation.view.sign_in
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.yeoboya.presentation.R
 import com.yeoboya.presentation.databinding.ActivitySignInBinding
+import com.yeoboya.presentation.view.sign_up.SignUpActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
