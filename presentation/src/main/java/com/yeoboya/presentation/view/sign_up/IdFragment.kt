@@ -6,15 +6,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.yeoboya.presentation.R
+import com.yeoboya.presentation.databinding.FragmentIdBinding
 
 class IdFragment : Fragment() {
+
+    private lateinit var binding: FragmentIdBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_id, container, false)
-    }
+    ): View {
+        binding = FragmentIdBinding.inflate(layoutInflater)
 
+        binding.nextButton.setOnClickListener {
+            val signUpActivity = activity as SignUpActivity
+            signUpActivity.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, PasswordFragment()).commitAllowingStateLoss()
+        }
+
+        return binding.root
+    }
 }
