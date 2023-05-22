@@ -8,19 +8,15 @@ import com.yeoboya.presentation.databinding.ActivitySignUpBinding
 import com.yeoboya.presentation.view.sign_in.SignInActivity
 
 class SignUpActivity : AppCompatActivity() {
-
     private lateinit var binding: ActivitySignUpBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivitySignUpBinding.inflate(layoutInflater)
+
         setContentView(binding.root)
 
-        val fragmentManager = supportFragmentManager
-        val fragmentTransaction = fragmentManager.beginTransaction()
-        val idFragment = IdFragment()
-
-        fragmentTransaction.replace(R.id.fragment_container, idFragment)
-        fragmentTransaction.commit()
+        supportFragmentManager.beginTransaction().add(R.id.fragment_container, IdFragment()).commit()
 
         binding.backArrow.setOnClickListener {
             startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))

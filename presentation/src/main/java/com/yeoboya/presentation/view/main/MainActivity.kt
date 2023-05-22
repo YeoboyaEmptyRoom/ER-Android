@@ -1,7 +1,8 @@
-package com.yeoboya.emptyroom
+package com.yeoboya.presentation.view.main
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.yeoboya.presentation.R
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
