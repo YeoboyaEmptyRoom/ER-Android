@@ -2,11 +2,11 @@ import org.gradle.api.JavaVersion
 
 object Versions {
     const val GRADLE = "7.4.2"
-    const val KOTLIN = "1.8.0"
+    const val KOTLIN = "1.8.10"
 
-    const val COMPILESDK = 33
+    const val COMPILESDK = 32
     const val MINSDK = 24
-    const val TARGETSDK = 33
+    const val TARGETSDK = 32
 
     val JAVA_VERSION = JavaVersion.VERSION_11
 
@@ -24,4 +24,6 @@ object Versions {
 
     const val RETROFIT = "2.9.0"
     const val OKHTTP = "4.10.0"
+
+    const val GLIDE = "4.12.0"
 }

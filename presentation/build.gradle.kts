@@ -47,4 +47,5 @@ dependencies {
     androidTestImplementation(Dependency.Test.ESPRESSO)
     implementation(Dependency.Google.HILT)
     kapt(Dependency.Google.HILT_COMPILER)
+    implementation(Dependency.Libraries.GLIDE)
 }
