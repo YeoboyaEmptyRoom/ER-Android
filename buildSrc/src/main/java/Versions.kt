@@ -25,5 +25,5 @@ object Versions {
     const val RETROFIT = "2.9.0"
     const val OKHTTP = "4.10.0"
 
-    const val GLIDE = "4.15.1"
+    const val GLIDE = "4.12.1"
 }
