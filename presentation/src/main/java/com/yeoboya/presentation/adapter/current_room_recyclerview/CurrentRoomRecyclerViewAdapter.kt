@@ -10,15 +10,19 @@ import com.bumptech.glide.Glide
 import com.yeoboya.domain.model.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.databinding.ActivityMainBinding
+import com.yeoboya.presentation.databinding.CurrentRoomListItemBinding
 
-class CurrentRoomRecyclerViewAdapter(var itemList: List<CurrentRoomModel>): RecyclerView.Adapter<CurrentRoomRecyclerViewAdapter.ViewHolder>() {
+class CurrentRoomRecyclerViewAdapter(var itemList: List<CurrentRoomModel>) :
+    RecyclerView.Adapter<CurrentRoomRecyclerViewAdapter.ViewHolder>() {
 
-    inner class ViewHolder(itemVIew: View): RecyclerView.ViewHolder(itemVIew) {
-        val roomImage = itemVIew.findViewById<ImageView>(R.id.room_image)
-        val roomPrice = itemVIew.findViewById<TextView>(R.id.room_price)
-        val roomWidthHeight = itemVIew.findViewById<TextView>(R.id.room_width_height)
-        val roomLocation = itemVIew.findViewById<TextView>(R.id.room_location)
-        val roomType = itemVIew.findViewById<TextView>(R.id.room_type)
+    inner class ViewHolder(itemVIew: View) : RecyclerView.ViewHolder(itemVIew) {
+        val binding = CurrentRoomListItemBinding.bind(itemVIew)
+
+        val roomImage = binding.roomImage
+        val roomPrice = binding.roomPrice
+        val roomWidthHeight = binding.roomWidthHeight
+        val roomLocation = binding.roomLocation
+        val roomType = binding.roomType
 
         fun bind(item: CurrentRoomModel) {
             Glide.with(itemView).load(item.roomImage).into(roomImage)
