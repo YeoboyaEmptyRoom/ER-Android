@@ -99,7 +99,11 @@ class NoticeActivity : AppCompatActivity() {
             override fun onItemClick(position: Int) {
                 super.onItemClick(position)
                 val item = list[position]
-                startActivity(Intent(this@NoticeActivity, NoticeDetailActivity::class.java))
+                val intent = Intent(this@NoticeActivity, NoticeDetailActivity::class.java)
+                intent.putExtra("title", item.title)
+                intent.putExtra("writeDate", item.writeDate)
+                intent.putExtra("description", item.description)
+                startActivity(intent)
             }
         }
     }
