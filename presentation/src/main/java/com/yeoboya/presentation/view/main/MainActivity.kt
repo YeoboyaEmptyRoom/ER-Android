@@ -1,11 +1,13 @@
 package com.yeoboya.presentation.view.main
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yeoboya.domain.model.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.adapter.current_room_recyclerview.CurrentRoomRecyclerViewAdapter
 import com.yeoboya.presentation.databinding.ActivityMainBinding
+import com.yeoboya.presentation.view.notice.NoticeActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -64,6 +66,10 @@ class MainActivity : AppCompatActivity() {
         )
 
         initRecyclerView()
+
+        binding.announcement.setOnClickListener {
+            startActivity(Intent(this@MainActivity, NoticeActivity::class.java))
+        }
     }
 
     private fun initRecyclerView() {
