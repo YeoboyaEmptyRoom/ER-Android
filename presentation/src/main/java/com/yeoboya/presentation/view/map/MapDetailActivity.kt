@@ -91,6 +91,10 @@ class MapDetailActivity : AppCompatActivity() {
             )
         )
 
+        binding.mapDetailBackArrow.setOnClickListener {
+            startActivity(Intent(this@MapDetailActivity, MapActivity::class.java))
+        }
+
         initRecyclerView()
     }
 
