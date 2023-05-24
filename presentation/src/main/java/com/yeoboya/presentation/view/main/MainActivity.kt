@@ -7,6 +7,7 @@ import com.yeoboya.domain.model.main.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.adapter.current_room_recyclerview.CurrentRoomRecyclerViewAdapter
 import com.yeoboya.presentation.databinding.ActivityMainBinding
+import com.yeoboya.presentation.view.map.MapActivity
 import com.yeoboya.presentation.view.notice.NoticeActivity
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -70,6 +71,19 @@ class MainActivity : AppCompatActivity() {
         binding.announcement.setOnClickListener {
             startActivity(Intent(this@MainActivity, NoticeActivity::class.java))
         }
+
+        binding.wantOneRoom.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapActivity::class.java))
+        }
+        binding.wantTwoRoom.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapActivity::class.java))
+        }
+        binding.wantOfficetels.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapActivity::class.java))
+        }
+        binding.wantApartment.setOnClickListener {
+            startActivity(Intent(this@MainActivity, MapActivity::class.java))
+        }
     }
 
     private fun initRecyclerView() {
@@ -78,5 +92,4 @@ class MainActivity : AppCompatActivity() {
         adapter.itemList = list
         adapter.notifyDataSetChanged()
     }
-
 }

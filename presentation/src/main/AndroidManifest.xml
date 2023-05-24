@@ -4,6 +4,9 @@
 
     <application>
         <activity
+            android:name=".view.map.MapActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.notice.NoticeDetailActivity"
             android:exported="false" />
         <activity
