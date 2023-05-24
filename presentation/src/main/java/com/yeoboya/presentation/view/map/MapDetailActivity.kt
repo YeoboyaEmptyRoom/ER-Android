@@ -114,6 +114,7 @@ class MapDetailActivity : AppCompatActivity() {
                 intent.putExtra("roomWidthHeight", item.roomWidthHeight)
                 intent.putExtra("roomLocation", item.roomLocation)
                 intent.putExtra("roomType", item.roomType)
+                intent.putExtra("beforePage", "MapDetail")
                 startActivity(intent)
             }
         }
