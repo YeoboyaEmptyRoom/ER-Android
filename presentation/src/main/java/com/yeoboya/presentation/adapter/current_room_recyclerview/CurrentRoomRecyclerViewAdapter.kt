@@ -3,13 +3,10 @@ package com.yeoboya.presentation.adapter.current_room_recyclerview
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.yeoboya.domain.model.CurrentRoomModel
+import com.yeoboya.domain.model.main.CurrentRoomModel
 import com.yeoboya.presentation.R
-import com.yeoboya.presentation.databinding.ActivityMainBinding
 import com.yeoboya.presentation.databinding.CurrentRoomListItemBinding
 
 class CurrentRoomRecyclerViewAdapter(var itemList: List<CurrentRoomModel>) :

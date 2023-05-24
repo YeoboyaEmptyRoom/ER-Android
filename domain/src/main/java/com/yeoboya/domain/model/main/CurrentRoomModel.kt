@@ -1,4 +1,4 @@
-package com.yeoboya.domain.model
+package com.yeoboya.domain.model.main
 
 data class CurrentRoomModel (
     val roomImage: Int,
