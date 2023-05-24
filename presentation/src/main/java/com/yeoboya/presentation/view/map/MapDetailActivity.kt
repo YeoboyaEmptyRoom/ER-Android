@@ -1,11 +1,13 @@
 package com.yeoboya.presentation.view.map
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yeoboya.domain.model.main.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.adapter.current_room_recyclerview.CurrentRoomRecyclerViewAdapter
 import com.yeoboya.presentation.databinding.ActivityMapDetailBinding
+import com.yeoboya.presentation.view.current.CurrentListDetailActivity
 
 class MapDetailActivity : AppCompatActivity() {
 
@@ -97,5 +99,19 @@ class MapDetailActivity : AppCompatActivity() {
         binding.mapCurrentRoomList.adapter = adapter
         adapter.itemList = list
         adapter.notifyDataSetChanged()
+
+        adapter.itemClickListener = object : CurrentRoomRecyclerViewAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                super.onItemClick(position)
+                val item = list[position]
+                val intent = Intent(this@MapDetailActivity, CurrentListDetailActivity::class.java)
+                intent.putExtra("roomImage", item.roomImage)
+                intent.putExtra("roomPrice", item.roomPrice)
+                intent.putExtra("roomWidthHeight", item.roomWidthHeight)
+                intent.putExtra("roomLocation", item.roomLocation)
+                intent.putExtra("roomType", item.roomType)
+                startActivity(intent)
+            }
+        }
     }
 }
