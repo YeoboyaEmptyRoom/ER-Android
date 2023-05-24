@@ -185,13 +185,34 @@
                 app:layout_constraintTop_toTopOf="@id/ruler_icon" />
 
             <ImageView
+                android:id="@+id/room_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/room"
+                app:layout_constraintStart_toStartOf="@id/ruler_icon"
+                app:layout_constraintTop_toBottomOf="@id/ruler_text" />
+
+            <TextView
+                android:id="@+id/room_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="분리형 원룸 (욕실 1개)"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/room_icon"
+                app:layout_constraintStart_toEndOf="@id/room_icon"
+                app:layout_constraintTop_toTopOf="@id/room_icon" />
+
+            <ImageView
                 android:id="@+id/floor_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
                 android:src="@drawable/floor"
-                app:layout_constraintStart_toStartOf="@id/ruler_icon"
-                app:layout_constraintTop_toBottomOf="@id/ruler_text" />
+                app:layout_constraintStart_toStartOf="@id/room_icon"
+                app:layout_constraintTop_toBottomOf="@id/room_text" />
 
             <TextView
                 android:id="@+id/floor_text"
@@ -219,7 +240,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
-                android:text="광주광역시 광산구 송정 "
+                android:text="광주광역시 광산구 송정동"
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="@id/location_icon"
