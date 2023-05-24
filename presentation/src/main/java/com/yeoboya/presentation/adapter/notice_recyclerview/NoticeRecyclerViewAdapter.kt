@@ -10,6 +10,10 @@ import com.yeoboya.presentation.databinding.NoticeListItemBinding
 
 class NoticeRecyclerViewAdapter(var itemList: List<NoticeModel>): RecyclerView.Adapter<NoticeRecyclerViewAdapter.ViewHolder>() {
 
+    var itemClickListener: OnItemClickListener? = null
+    interface OnItemClickListener {
+        fun onItemClick(position: Int) {}
+    }
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
         val binding = NoticeListItemBinding.bind(itemView)
 
@@ -21,6 +25,12 @@ class NoticeRecyclerViewAdapter(var itemList: List<NoticeModel>): RecyclerView.A
             title.text = item.title
             writeDate.text = item.writeDate
             description.text = item.description
+        }
+
+        init {
+            itemView.setOnClickListener {
+                itemClickListener?.onItemClick(adapterPosition)
+            }
         }
     }
 

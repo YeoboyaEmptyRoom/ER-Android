@@ -1,5 +1,6 @@
 package com.yeoboya.presentation.view.notice
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.yeoboya.domain.model.notice.NoticeModel
@@ -93,5 +94,13 @@ class NoticeActivity : AppCompatActivity() {
         binding.noticeRecyclerview.adapter = adapter
         adapter.itemList = list
         adapter.notifyDataSetChanged()
+
+        adapter.itemClickListener = object : NoticeRecyclerViewAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                super.onItemClick(position)
+                val item = list[position]
+                startActivity(Intent(this@NoticeActivity, NoticeDetailActivity::class.java))
+            }
+        }
     }
 }
