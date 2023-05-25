@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".view.current.CurrentListDetailActivity">
+
+        <ImageView
+            android:id="@+id/current_list_detail_back_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="30dp"
+            android:padding="5dp"
+            android:src="@drawable/back_arrow"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/current_list_detail_notice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="상세설명"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/current_list_detail_back_arrow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/current_list_detail_back_arrow" />
+
+
+        <HorizontalScrollView
+            android:id="@+id/horizontal_current_image_list"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="30dp"
+            app:layout_constraintBottom_toTopOf="@id/detail_info_layout"
+            app:layout_constraintTop_toBottomOf="@id/current_list_detail_notice_text"
+            tools:ignore="SpeakableTextPresentCheck">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/horizontal_current_image_1"
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter" />
+
+                <ImageView
+                    android:id="@+id/horizontal_current_image_2"
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/home" />
+
+                <ImageView
+                    android:id="@+id/horizontal_current_image_3"
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/two_home" />
+
+                <ImageView
+                    android:id="@+id/horizontal_current_image_4"
+                    android:layout_width="370dp"
+                    android:layout_height="match_parent"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/officetels" />
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/detail_info_layout"
+            android:layout_width="0dp"
+            android:layout_height="365dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintEnd_toEndOf="@id/horizontal_current_image_list"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@id/horizontal_current_image_list"
+            app:layout_constraintTop_toBottomOf="@id/horizontal_current_image_list">
+
+            <TextView
+                android:id="@+id/price_info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:text="가격정보"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/price_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="월세 500/40"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/price_info_text"
+                app:layout_constraintTop_toBottomOf="@id/price_info_text" />
+
+            <TextView
+                android:id="@+id/management_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="관리비 10만원"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/price_text"
+                app:layout_constraintTop_toBottomOf="@id/price_text" />
+
+            <TextView
+                android:id="@+id/packing_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="주차비 4만원"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@id/management_text"
+                app:layout_constraintTop_toBottomOf="@id/management_text" />
+
+            <TextView
+                android:id="@+id/detail_info_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="상세설명"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@id/packing_text"
+                app:layout_constraintTop_toBottomOf="@id/packing_text" />
+
+            <TextView
+                android:id="@+id/detail_text"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="20dp"
+                android:layout_marginBottom="20dp"
+                android:text="송정공원역 3분거리 원룸\n편의점 1분 거리\n지하철 버스정류장 사우나 병원 3분거리\n교통 생활권 최고"
+                android:textColor="@color/black"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/detail_info_text"
+                app:layout_constraintTop_toBottomOf="@id/detail_info_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:background="@drawable/edittext_background"
+            app:layout_constraintBottom_toTopOf="@id/talk_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/detail_info_layout">
+
+            <ImageView
+                android:id="@+id/money_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/money"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/money_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="월세 500/40"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="@id/money_icon"
+                app:layout_constraintStart_toEndOf="@id/money_icon"
+                app:layout_constraintTop_toTopOf="@id/money_icon" />
+
+            <ImageView
+                android:id="@+id/ruler_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ruler"
+                app:layout_constraintStart_toStartOf="@id/money_icon"
+                app:layout_constraintTop_toBottomOf="@id/money_text" />
+
+            <TextView
+                android:id="@+id/ruler_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="7평"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/ruler_icon"
+                app:layout_constraintStart_toEndOf="@id/ruler_icon"
+                app:layout_constraintTop_toTopOf="@id/ruler_icon" />
+
+            <ImageView
+                android:id="@+id/room_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/room"
+                app:layout_constraintStart_toStartOf="@id/ruler_icon"
+                app:layout_constraintTop_toBottomOf="@id/ruler_text" />
+
+            <TextView
+                android:id="@+id/room_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="분리형 원룸 (욕실 1개)"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/room_icon"
+                app:layout_constraintStart_toEndOf="@id/room_icon"
+                app:layout_constraintTop_toTopOf="@id/room_icon" />
+
+            <ImageView
+                android:id="@+id/floor_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/floor"
+                app:layout_constraintStart_toStartOf="@id/room_icon"
+                app:layout_constraintTop_toBottomOf="@id/room_text" />
+
+            <TextView
+                android:id="@+id/floor_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="5층"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/floor_icon"
+                app:layout_constraintStart_toEndOf="@id/floor_icon"
+                app:layout_constraintTop_toTopOf="@id/floor_icon" />
+
+            <ImageView
+                android:id="@+id/location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/location"
+                app:layout_constraintStart_toStartOf="@id/floor_icon"
+                app:layout_constraintTop_toBottomOf="@id/floor_text" />
+
+            <TextView
+                android:id="@+id/location_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="광주광역시 광산구 송정동"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:layout_constraintBottom_toBottomOf="@id/location_icon"
+                app:layout_constraintStart_toEndOf="@id/location_icon"
+                app:layout_constraintTop_toTopOf="@id/location_icon" />
+
+            <TextView
+                android:id="@+id/company_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="30dp"
+                android:text="송정동 중개사무소"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@id/location_icon"
+                app:layout_constraintTop_toBottomOf="@id/location_text" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/talk_button"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:background="@drawable/p1_button"
+            android:gravity="center"
+            android:text="문의하기"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/info_layout"
+            app:layout_constraintStart_toStartOf="@id/info_layout"
+            app:layout_constraintTop_toBottomOf="@id/info_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

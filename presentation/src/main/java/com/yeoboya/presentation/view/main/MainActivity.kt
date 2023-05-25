@@ -7,6 +7,7 @@ import com.yeoboya.domain.model.main.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.adapter.current_room_recyclerview.CurrentRoomRecyclerViewAdapter
 import com.yeoboya.presentation.databinding.ActivityMainBinding
+import com.yeoboya.presentation.view.current.CurrentListDetailActivity
 import com.yeoboya.presentation.view.map.MapActivity
 import com.yeoboya.presentation.view.notice.NoticeActivity
 import dagger.hilt.android.AndroidEntryPoint
@@ -91,5 +92,20 @@ class MainActivity : AppCompatActivity() {
         binding.currentRoomList.adapter = adapter
         adapter.itemList = list
         adapter.notifyDataSetChanged()
+
+        adapter.itemClickListener = object : CurrentRoomRecyclerViewAdapter.OnItemClickListener {
+            override fun onItemClick(position: Int) {
+                super.onItemClick(position)
+                val item = list[position]
+                val intent = Intent(this@MainActivity, CurrentListDetailActivity::class.java)
+                intent.putExtra("roomImage", item.roomImage)
+                intent.putExtra("roomPrice", item.roomPrice)
+                intent.putExtra("roomWidthHeight", item.roomWidthHeight)
+                intent.putExtra("roomLocation", item.roomLocation)
+                intent.putExtra("roomType", item.roomType)
+                intent.putExtra("beforePage", "Main")
+                startActivity(intent)
+            }
+        }
     }
 }

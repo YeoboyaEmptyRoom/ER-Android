@@ -9,8 +9,12 @@ import com.yeoboya.domain.model.main.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.databinding.CurrentRoomListItemBinding
 
-class CurrentRoomRecyclerViewAdapter(var itemList: List<CurrentRoomModel>) :
-    RecyclerView.Adapter<CurrentRoomRecyclerViewAdapter.ViewHolder>() {
+class CurrentRoomRecyclerViewAdapter(var itemList: List<CurrentRoomModel>) : RecyclerView.Adapter<CurrentRoomRecyclerViewAdapter.ViewHolder>() {
+
+    var itemClickListener: OnItemClickListener? = null
+    interface OnItemClickListener {
+        fun onItemClick(position: Int) {}
+    }
 
     inner class ViewHolder(itemVIew: View) : RecyclerView.ViewHolder(itemVIew) {
         val binding = CurrentRoomListItemBinding.bind(itemVIew)
@@ -27,6 +31,12 @@ class CurrentRoomRecyclerViewAdapter(var itemList: List<CurrentRoomModel>) :
             roomWidthHeight.text = item.roomWidthHeight
             roomLocation.text = item.roomLocation
             roomType.text = item.roomType
+        }
+
+        init {
+            itemView.setOnClickListener {
+                itemClickListener?.onItemClick(adapterPosition)
+            }
         }
     }
 
