@@ -3,6 +3,8 @@ package com.yeoboya.presentation.view.current
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.bumptech.glide.Glide
+import com.yeoboya.presentation.R
 import com.yeoboya.presentation.databinding.ActivityCurrentListDetailBinding
 import com.yeoboya.presentation.view.main.MainActivity
 import com.yeoboya.presentation.view.map.MapDetailActivity
@@ -26,6 +28,7 @@ class CurrentListDetailActivity : AppCompatActivity() {
     }
 
     fun initLoading() {
+        Glide.with(this).load(intent.getIntExtra("roomImage", R.drawable.home)).into(binding.horizontalCurrentImage1)
         binding.moneyText.text = intent.getStringExtra("roomPrice")
         binding.priceText.text = intent.getStringExtra("roomPrice")
         binding.rulerText.text = intent.getStringExtra("roomWidthHeight")
