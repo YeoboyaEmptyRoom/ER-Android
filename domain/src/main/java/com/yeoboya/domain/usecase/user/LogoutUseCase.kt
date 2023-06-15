@@ -6,5 +6,5 @@ import javax.inject.Inject
 class LogoutUseCase @Inject constructor(
     private val userRepository: UserRepository
 ) {
-    suspend operator fun invoke() = userRepository.logout()
+    suspend operator fun invoke() = kotlin.runCatching { userRepository.logout() }
 }
