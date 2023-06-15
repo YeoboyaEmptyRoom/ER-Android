@@ -19,5 +19,10 @@ class SignUpActivity : AppCompatActivity() {
         binding.backArrow.setOnClickListener {
             startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
         }
+
+        binding.signupButton.setOnClickListener {
+            startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+        }
+
     }
 }
