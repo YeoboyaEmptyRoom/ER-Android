@@ -16,10 +16,13 @@ class SignUpActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        supportFragmentManager.beginTransaction().add(R.id.fragment_container, IdFragment()).commit()
-
         binding.backArrow.setOnClickListener {
             startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
         }
+
+        binding.signupButton.setOnClickListener {
+            startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+        }
+
     }
 }
