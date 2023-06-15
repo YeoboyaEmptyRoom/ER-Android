@@ -21,7 +21,6 @@ class IdFragment : Fragment() {
 
         binding.nextButton.setOnClickListener {
             val signUpActivity = activity as SignUpActivity
-            signUpActivity.supportFragmentManager.beginTransaction().replace(R.id.fragment_container, PasswordFragment()).commitAllowingStateLoss()
         }
 
         return binding.root
