@@ -48,4 +48,6 @@ dependencies {
     implementation(Dependency.Google.HILT)
     kapt(Dependency.Google.HILT_COMPILER)
     implementation(Dependency.Libraries.GLIDE)
+    implementation(Dependency.AndroidX.VIEW_MODEL)
+    implementation("androidx.activity:activity-ktx:1.7.2")
 }
