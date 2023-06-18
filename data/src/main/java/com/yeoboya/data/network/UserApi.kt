@@ -3,19 +3,20 @@ package com.yeoboya.data.network
 import com.yeoboya.data.model.request.SignInRequest
 import com.yeoboya.data.model.request.SignUpRequest
 import com.yeoboya.data.model.response.UserResponse
+import retrofit2.http.Body
 import retrofit2.http.POST
 
 interface UserApi {
-    @POST("user/registration")
+    @POST("user/registration/")
     suspend fun signUp(
-        body: SignUpRequest
-    ): UserResponse
+        @Body body: SignUpRequest
+    )
 
-    @POST("user/login")
+    @POST("user/login/")
     suspend fun signIn(
-        body: SignInRequest
+        @Body body: SignInRequest
     ): UserResponse
 
-    @POST("user/logout")
+    @POST("user/logout/")
     suspend fun logout()
 }
