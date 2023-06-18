@@ -10,7 +10,7 @@ import javax.inject.Inject
 class UserDataSourceImpl @Inject constructor(
     private val userApi: UserApi
 ): UserDataSource {
-    override suspend fun signUp(body: SignUpRequest): UserResponse = safeApiCall { userApi.signUp(body) }
+    override suspend fun signUp(body: SignUpRequest) = safeApiCall { userApi.signUp(body) }
 
     override suspend fun signIn(body: SignInRequest): UserResponse = safeApiCall { userApi.signIn(body) }
 

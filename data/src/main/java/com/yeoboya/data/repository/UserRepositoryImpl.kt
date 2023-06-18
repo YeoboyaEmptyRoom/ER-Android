@@ -13,7 +13,7 @@ import javax.inject.Inject
 class UserRepositoryImpl @Inject constructor(
     private val userDataSource: UserDataSource
 ): UserRepository {
-    override suspend fun signUp(body: SignUpRequestModel): UserResponseModel = userDataSource.signUp(body.asSignUpRequest()).asUserResponseModel()
+    override suspend fun signUp(body: SignUpRequestModel) = userDataSource.signUp(body.asSignUpRequest())
 
     override suspend fun signIn(body: SignInRequestModel): UserResponseModel = userDataSource.signIn(body.asSignInRequest()).asUserResponseModel()
 

@@ -5,7 +5,7 @@ import com.yeoboya.domain.model.user.request.SignUpRequestModel
 import com.yeoboya.domain.model.user.response.UserResponseModel
 
 interface UserRepository {
-    suspend fun signUp(body: SignUpRequestModel): UserResponseModel
+    suspend fun signUp(body: SignUpRequestModel)
 
     suspend fun signIn(body: SignInRequestModel): UserResponseModel
 
