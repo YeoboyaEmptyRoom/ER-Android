@@ -14,6 +14,7 @@ object Versions {
     const val APPCOMPAT = "1.4.1"
     const val CONSTRAINT_LAYOUT = "2.1.4"
     const val VIEW_MODEl = "2.6.1"
+    const val ACTIVITY = "1.7.2"
 
     const val JUNIT = "4.13.2"
     const val ANDROID_JUNIT = "1.1.3"
