@@ -1,5 +1,6 @@
 package com.yeoboya.data.datasource.main
 
+import com.yeoboya.data.model.response.main.DetailResponse
 import com.yeoboya.data.model.response.main.MainResponse
 
 interface MainDataSource {
@@ -8,4 +9,6 @@ interface MainDataSource {
     suspend fun getMonthlyRooms(): List<MainResponse>
 
     suspend fun getLeaseRooms(): List<MainResponse>
+
+    suspend fun getDetail(id: Int): DetailResponse
 }
