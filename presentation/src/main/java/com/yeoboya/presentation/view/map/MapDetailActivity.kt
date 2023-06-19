@@ -30,7 +30,7 @@ class MapDetailActivity : AppCompatActivity() {
             val roomsList = rooms.map {
                 CurrentRoomModel(
                     roomImage = R.drawable.room,
-                    roomPrice = "${it.rent_type} 123",
+                    roomPrice = "${it.rent_type} ${it.price}",
                     roomWidthHeight = "${it.area}",
                     roomLocation = it.location,
                     roomType = it.room_type
@@ -44,6 +44,9 @@ class MapDetailActivity : AppCompatActivity() {
         }
 
         binding.filter.setOnClickListener {
+            binding.monthlyText.setTextColor(resources.getColor(R.color.black))
+            binding.charterText.setTextColor(resources.getColor(R.color.black))
+
             val layoutParams = binding.mapCurrentRoomList.layoutParams as ConstraintLayout.LayoutParams
             if (check) {
                 binding.mapCurrentIntroText.visibility = View.GONE
@@ -61,7 +64,7 @@ class MapDetailActivity : AppCompatActivity() {
                 val roomsList = rooms.map {
                     CurrentRoomModel(
                         roomImage = R.drawable.room,
-                        roomPrice = "${it.rent_type} 123",
+                        roomPrice = "${it.rent_type} ${it.price}",
                         roomWidthHeight = "${it.area}",
                         roomLocation = it.location,
                         roomType = it.room_type
@@ -72,11 +75,14 @@ class MapDetailActivity : AppCompatActivity() {
         }
 
         binding.monthlyText.setOnClickListener {
+            binding.monthlyText.setTextColor(resources.getColor(R.color.P1))
+            binding.charterText.setTextColor(resources.getColor(R.color.black))
+
             mainViewModel.getMonthlyRooms { rooms ->
                 val roomsList = rooms.map {
                     CurrentRoomModel(
                         roomImage = R.drawable.room,
-                        roomPrice = "${it.rent_type} 123",
+                        roomPrice = "${it.rent_type} ${it.price}",
                         roomWidthHeight = "${it.area}",
                         roomLocation = it.location,
                         roomType = it.room_type
@@ -87,11 +93,14 @@ class MapDetailActivity : AppCompatActivity() {
         }
 
         binding.charterText.setOnClickListener {
+            binding.charterText.setTextColor(resources.getColor(R.color.P1))
+            binding.monthlyText.setTextColor(resources.getColor(R.color.black))
+
             mainViewModel.getLeaseRooms { rooms ->
                 val roomsList = rooms.map {
                     CurrentRoomModel(
                         roomImage = R.drawable.room,
-                        roomPrice = "${it.rent_type} 123",
+                        roomPrice = "${it.rent_type} ${it.price}",
                         roomWidthHeight = "${it.area}",
                         roomLocation = it.location,
                         roomType = it.room_type
