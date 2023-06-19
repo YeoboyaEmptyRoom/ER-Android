@@ -1,9 +1,9 @@
 package com.yeoboya.data.datasource.user
 
-import com.yeoboya.data.model.request.SignInRequest
-import com.yeoboya.data.model.request.SignUpRequest
-import com.yeoboya.data.model.response.SignUpResponse
-import com.yeoboya.data.model.response.UserResponse
+import com.yeoboya.data.model.request.user.SignInRequest
+import com.yeoboya.data.model.request.user.SignUpRequest
+import com.yeoboya.data.model.response.user.SignUpResponse
+import com.yeoboya.data.model.response.user.UserResponse
 import com.yeoboya.data.network.UserApi
 import com.yeoboya.data.util.safeApiCall
 import javax.inject.Inject

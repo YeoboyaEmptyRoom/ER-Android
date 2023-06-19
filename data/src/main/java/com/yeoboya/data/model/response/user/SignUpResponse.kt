@@ -1,4 +1,4 @@
-package com.yeoboya.data.model.response
+package com.yeoboya.data.model.response.user
 
 import com.yeoboya.domain.model.user.response.SignUpResponseModel
 
