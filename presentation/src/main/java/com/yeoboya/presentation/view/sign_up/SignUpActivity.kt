@@ -28,12 +28,13 @@ class SignUpActivity : AppCompatActivity() {
             val signUpRequestModel = SignUpRequestModel(
                 email = binding.emailEditText.text.toString(),
                 username = binding.idEditText.text.toString(),
-                password1 = binding.passwordEditText.text.toString(),
-                password2 = binding.passwordCheckEditText.text.toString()
+                password = binding.passwordEditText.text.toString(),
+                password_confirm = binding.passwordCheckEditText.text.toString()
             )
             userViewModel.signUp(signUpRequestModel) {
                 startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
             }
         }
+
     }
 }
