@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
             val roomsList = rooms.map {
                 CurrentRoomModel(
                     roomImage = R.drawable.room,
-                    roomPrice = "${it.rent_type} 123",
+                    roomPrice = "${it.rent_type} ${it.price}",
                     roomWidthHeight = "${it.area}",
                     roomLocation = it.location,
                     roomType = it.room_type
