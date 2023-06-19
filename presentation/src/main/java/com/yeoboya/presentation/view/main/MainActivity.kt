@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
                 CurrentRoomModel(
                     roomImage = R.drawable.room,
                     roomPrice = "${it.rent_type} ${it.price}",
-                    roomWidthHeight = "${it.area}",
+                    roomWidthHeight = "${it.area}m^2",
                     roomLocation = it.location,
                     roomType = it.room_type
                 )
@@ -70,11 +70,8 @@ class MainActivity : AppCompatActivity() {
                 val item = list[position]
                 val intent = Intent(this@MainActivity, CurrentListDetailActivity::class.java)
                 intent.putExtra("roomImage", item.roomImage)
-                intent.putExtra("roomPrice", item.roomPrice)
-                intent.putExtra("roomWidthHeight", item.roomWidthHeight)
-                intent.putExtra("roomLocation", item.roomLocation)
-                intent.putExtra("roomType", item.roomType)
                 intent.putExtra("beforePage", "Main")
+                intent.putExtra("id", position + 1)
                 startActivity(intent)
             }
         }
