@@ -4,5 +4,6 @@
 
     <style name="Theme.EmptyRoom" parent="Base.Theme.EmptyRoom" >
         <item name="android:windowIsTranslucent">true</item>
-    </style>
+        <item name="android:windowBackground">#FFFFFF</item>
+</style>
 </resources>
