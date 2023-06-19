@@ -17,6 +17,44 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/filterContent"
+        android:layout_marginTop="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/edittext_background"
+        app:layout_constraintStart_toStartOf="@id/map_detail_back_arrow"
+        app:layout_constraintEnd_toEndOf="@id/filter"
+        android:visibility="gone"
+        tools:visibility="visible"
+        app:layout_constraintTop_toBottomOf="@id/map_detail_back_arrow">
+        <TextView
+            android:id="@+id/content"
+            android:layout_marginVertical="20dp"
+            android:text="전세"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+        <View
+            android:layout_marginVertical="15dp"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/G1" />
+        <TextView
+            android:layout_marginVertical="20dp"
+            android:text="월세"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
     <TextView
         android:id="@+id/map_detail_notice_text"
         android:layout_width="wrap_content"
@@ -29,6 +67,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@id/map_detail_back_arrow" />
+
+    <ImageView
+        android:id="@+id/filter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:src="@drawable/filter"
+        app:layout_constraintTop_toTopOf="@id/map_detail_back_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/map_detail_back_arrow"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp" />
 
     <TextView
         android:id="@+id/map_current_intro_text"
