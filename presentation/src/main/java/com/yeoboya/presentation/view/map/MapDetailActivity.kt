@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.content.ContextCompat
 import com.yeoboya.domain.model.main.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.adapter.current_room_recyclerview.CurrentRoomRecyclerViewAdapter
@@ -44,8 +45,8 @@ class MapDetailActivity : AppCompatActivity() {
         }
 
         binding.filter.setOnClickListener {
-            binding.monthlyText.setTextColor(resources.getColor(R.color.black))
-            binding.charterText.setTextColor(resources.getColor(R.color.black))
+            binding.monthlyText.setTextColor(ContextCompat.getColor(this, R.color.black))
+            binding.charterText.setTextColor(ContextCompat.getColor(this, R.color.black))
 
             val layoutParams = binding.mapCurrentRoomList.layoutParams as ConstraintLayout.LayoutParams
             if (check) {
@@ -75,8 +76,8 @@ class MapDetailActivity : AppCompatActivity() {
         }
 
         binding.monthlyText.setOnClickListener {
-            binding.monthlyText.setTextColor(resources.getColor(R.color.P1))
-            binding.charterText.setTextColor(resources.getColor(R.color.black))
+            binding.monthlyText.setTextColor(ContextCompat.getColor(this, R.color.P1))
+            binding.charterText.setTextColor(ContextCompat.getColor(this, R.color.black))
 
             mainViewModel.getMonthlyRooms { rooms ->
                 val roomsList = rooms.map {
@@ -93,8 +94,8 @@ class MapDetailActivity : AppCompatActivity() {
         }
 
         binding.charterText.setOnClickListener {
-            binding.charterText.setTextColor(resources.getColor(R.color.P1))
-            binding.monthlyText.setTextColor(resources.getColor(R.color.black))
+            binding.monthlyText.setTextColor(ContextCompat.getColor(this, R.color.black))
+            binding.charterText.setTextColor(ContextCompat.getColor(this, R.color.P1))
 
             mainViewModel.getLeaseRooms { rooms ->
                 val roomsList = rooms.map {
