@@ -1,10 +1,10 @@
 package com.yeoboya.data.repository
 
 import com.yeoboya.data.datasource.user.UserDataSource
-import com.yeoboya.data.model.request.asSignInRequest
-import com.yeoboya.data.model.request.asSignUpRequest
-import com.yeoboya.data.model.response.asSignUpResponseModel
-import com.yeoboya.data.model.response.asUserResponseModel
+import com.yeoboya.data.model.request.user.asSignInRequest
+import com.yeoboya.data.model.request.user.asSignUpRequest
+import com.yeoboya.data.model.response.user.asSignUpResponseModel
+import com.yeoboya.data.model.response.user.asUserResponseModel
 import com.yeoboya.domain.model.user.request.SignInRequestModel
 import com.yeoboya.domain.model.user.request.SignUpRequestModel
 import com.yeoboya.domain.model.user.response.SignUpResponseModel

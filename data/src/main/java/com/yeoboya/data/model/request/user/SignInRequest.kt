@@ -1,4 +1,4 @@
-package com.yeoboya.data.model.request
+package com.yeoboya.data.model.request.user
 
 import com.yeoboya.domain.model.user.request.SignInRequestModel
 

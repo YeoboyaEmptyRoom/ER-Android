@@ -1,9 +1,9 @@
 package com.yeoboya.data.network
 
-import com.yeoboya.data.model.request.SignInRequest
-import com.yeoboya.data.model.request.SignUpRequest
-import com.yeoboya.data.model.response.SignUpResponse
-import com.yeoboya.data.model.response.UserResponse
+import com.yeoboya.data.model.request.user.SignInRequest
+import com.yeoboya.data.model.request.user.SignUpRequest
+import com.yeoboya.data.model.response.user.SignUpResponse
+import com.yeoboya.data.model.response.user.UserResponse
 import retrofit2.http.Body
 import retrofit2.http.POST
 
