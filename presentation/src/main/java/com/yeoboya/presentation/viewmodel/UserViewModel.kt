@@ -28,11 +28,10 @@ class UserViewModel @Inject constructor(
         viewModelScope.launch {
             signInUseCase(body)
                 .onSuccess {
-                    Log.d("TAG", "signIn Success: $it")
+                    Toast.makeText(application, "로그인에 성공했습니다.", Toast.LENGTH_SHORT).show()
                     moveToMain()
                 }
                 .onFailure {
-                    Log.d("TAG", "signIn Failure: ${it.message}")
                     Toast.makeText(application, "로그인에 실패했습니다.", Toast.LENGTH_SHORT).show()
                 }
         }
@@ -45,11 +44,10 @@ class UserViewModel @Inject constructor(
         viewModelScope.launch {
             signUpUseCase(body)
                 .onSuccess {
-                    Log.d("TAG", "signUp Success: $it")
+                    Toast.makeText(application, "회원가입에 성공했습니다.", Toast.LENGTH_SHORT).show()
                     moveToSignIn()
                 }
                 .onFailure {
-                    Log.d("TAG", "signUp Failure: ${it.message}")
                     Toast.makeText(application, "회원가입에 실패했습니다.", Toast.LENGTH_SHORT).show()
                 }
         }
