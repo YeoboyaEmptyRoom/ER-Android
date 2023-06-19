@@ -11,6 +11,8 @@ object Dependency {
         const val CORE_KTX = "androidx.core:core-ktx:${Versions.CORE_KTX}"
         const val APPCOMPAT = "androidx.appcompat:appcompat:${Versions.APPCOMPAT}"
         const val CONSTRAINT_LAYOUT = "androidx.constraintlayout:constraintlayout:${Versions.CONSTRAINT_LAYOUT}"
+        const val VIEW_MODEL = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.VIEW_MODEl}"
+        const val ACTIVITY = "androidx.activity:activity-ktx:${Versions.ACTIVITY}"
     }
 
     object Test {
