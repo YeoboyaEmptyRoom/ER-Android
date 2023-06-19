@@ -3,6 +3,8 @@ package com.yeoboya.presentation.view.map
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import androidx.constraintlayout.widget.ConstraintLayout
 import com.yeoboya.domain.model.main.CurrentRoomModel
 import com.yeoboya.presentation.R
 import com.yeoboya.presentation.adapter.current_room_recyclerview.CurrentRoomRecyclerViewAdapter
@@ -12,6 +14,7 @@ import com.yeoboya.presentation.view.current.CurrentListDetailActivity
 class MapDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMapDetailBinding
+    private var check = true
     val list = mutableListOf<CurrentRoomModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,6 +96,21 @@ class MapDetailActivity : AppCompatActivity() {
 
         binding.mapDetailBackArrow.setOnClickListener {
             startActivity(Intent(this@MapDetailActivity, MapActivity::class.java))
+        }
+
+        binding.filter.setOnClickListener {
+            val layoutParams = binding.mapCurrentRoomList.layoutParams as ConstraintLayout.LayoutParams
+            if (check) {
+                binding.mapCurrentIntroText.visibility = View.GONE
+                binding.filterContent.visibility = View.VISIBLE
+                layoutParams.topToBottom = R.id.filterContent
+                check = false
+            } else {
+                binding.mapCurrentIntroText.visibility = View.VISIBLE
+                binding.filterContent.visibility = View.GONE
+                layoutParams.topToBottom = R.id.map_current_intro_text
+                check = true
+            }
         }
 
         initRecyclerView()
