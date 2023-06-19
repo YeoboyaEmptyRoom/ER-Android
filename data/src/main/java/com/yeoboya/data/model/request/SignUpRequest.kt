@@ -5,13 +5,13 @@ import com.yeoboya.domain.model.user.request.SignUpRequestModel
 data class SignUpRequest(
     val email: String,
     val username: String,
-    val password1: String,
-    val password2: String
+    val password: String,
+    val password_confirm: String
 )
 
 fun SignUpRequestModel.asSignUpRequest() = SignUpRequest(
     email = email,
     username = username,
-    password1 = password1,
-    password2 = password2
+    password = password,
+    password_confirm = password_confirm
 )
