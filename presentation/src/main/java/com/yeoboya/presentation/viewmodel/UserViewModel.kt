@@ -46,7 +46,7 @@ class UserViewModel @Inject constructor(
             signUpUseCase(body)
                 .onSuccess {
                     Log.d("TAG", "signUp Success: $it")
-                    moveToSignIn
+                    moveToSignIn()
                 }
                 .onFailure {
                     Log.d("TAG", "signUp Failure: ${it.message}")
