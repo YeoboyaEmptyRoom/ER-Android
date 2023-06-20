@@ -34,7 +34,8 @@ class MapDetailActivity : AppCompatActivity() {
                     roomPrice = "${it.rent_type} ${it.price}",
                     roomWidthHeight = "${it.area}m^2",
                     roomLocation = it.location,
-                    roomType = it.room_type
+                    roomType = it.room_type,
+                    id = it.id
                 )
             }
             initRecyclerView(roomsList)
@@ -68,7 +69,8 @@ class MapDetailActivity : AppCompatActivity() {
                         roomPrice = "${it.rent_type} ${it.price}",
                         roomWidthHeight = "${it.area}m^2",
                         roomLocation = it.location,
-                        roomType = it.room_type
+                        roomType = it.room_type,
+                        id = it.id
                     )
                 }
                 initRecyclerView(roomsList)
@@ -86,7 +88,8 @@ class MapDetailActivity : AppCompatActivity() {
                         roomPrice = "${it.rent_type} ${it.price}",
                         roomWidthHeight = "${it.area}m^2",
                         roomLocation = it.location,
-                        roomType = it.room_type
+                        roomType = it.room_type,
+                        id = it.id
                     )
                 }
                 initRecyclerView(roomsList)
@@ -104,7 +107,8 @@ class MapDetailActivity : AppCompatActivity() {
                         roomPrice = "${it.rent_type} ${it.price}",
                         roomWidthHeight = "${it.area}m^2",
                         roomLocation = it.location,
-                        roomType = it.room_type
+                        roomType = it.room_type,
+                        id = it.id
                     )
                 }
                 initRecyclerView(roomsList)
@@ -126,7 +130,7 @@ class MapDetailActivity : AppCompatActivity() {
                 val intent = Intent(this@MapDetailActivity, CurrentListDetailActivity::class.java)
                 intent.putExtra("roomImage", item.roomImage)
                 intent.putExtra("beforePage", "MapDetail")
-                intent.putExtra("id", position + 1)
+                intent.putExtra("id", item.id)
                 startActivity(intent)
             }
         }

@@ -32,7 +32,8 @@ class MainActivity : AppCompatActivity() {
                     roomPrice = "${it.rent_type} ${it.price}",
                     roomWidthHeight = "${it.area}m^2",
                     roomLocation = it.location,
-                    roomType = it.room_type
+                    roomType = it.room_type,
+                    id = it.id
                 )
             }
             initRecyclerView(roomsList)
@@ -71,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                 val intent = Intent(this@MainActivity, CurrentListDetailActivity::class.java)
                 intent.putExtra("roomImage", item.roomImage)
                 intent.putExtra("beforePage", "Main")
-                intent.putExtra("id", position + 1)
+                intent.putExtra("id", item.id)
                 startActivity(intent)
             }
         }
