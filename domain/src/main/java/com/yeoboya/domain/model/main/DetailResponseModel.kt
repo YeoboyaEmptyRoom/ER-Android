@@ -10,5 +10,6 @@ data class DetailResponseModel(
     val room_type: String,
     val maintenance_fee: Int,
     val parking_fee: Int,
-    val description: String
+    val description: String,
+    val price: String
 )
