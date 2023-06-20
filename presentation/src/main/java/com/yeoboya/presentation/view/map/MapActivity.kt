@@ -15,6 +15,7 @@ class MapActivity : AppCompatActivity() {
 
         binding.detailButton.setOnClickListener {
             startActivity(Intent(this@MapActivity, MapDetailActivity::class.java))
+            finish()
         }
     }
 }

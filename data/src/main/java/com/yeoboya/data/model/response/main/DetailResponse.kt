@@ -12,7 +12,8 @@ data class DetailResponse(
     val room_type: String,
     val maintenance_fee: Int,
     val parking_fee: Int,
-    val description: String
+    val description: String,
+    val price: String
 )
 
 fun DetailResponse.asDetailResponseModel() = DetailResponseModel(
@@ -25,5 +26,6 @@ fun DetailResponse.asDetailResponseModel() = DetailResponseModel(
     room_type = room_type,
     maintenance_fee = maintenance_fee,
     parking_fee = parking_fee,
-    description = description
+    description = description,
+    price = price
 )

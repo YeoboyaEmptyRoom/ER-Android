@@ -104,6 +104,7 @@ class NoticeActivity : AppCompatActivity() {
                 intent.putExtra("writeDate", item.writeDate)
                 intent.putExtra("description", item.description)
                 startActivity(intent)
+                finish()
             }
         }
     }

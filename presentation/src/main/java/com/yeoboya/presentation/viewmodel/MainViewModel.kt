@@ -3,7 +3,9 @@ package com.yeoboya.presentation.viewmodel
 import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.yeoboya.domain.model.main.DetailResponseModel
 import com.yeoboya.domain.model.main.MainResponseModel
+import com.yeoboya.domain.usecase.main.GetDetailUseCase
 import com.yeoboya.domain.usecase.main.GetLeaseRoomsUseCase
 import com.yeoboya.domain.usecase.main.GetMonthlyRoomsUseCase
 import com.yeoboya.domain.usecase.main.GetRoomsUseCase
@@ -15,7 +17,8 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val getRoomsUseCase: GetRoomsUseCase,
     private val getMonthlyRoomsUseCase: GetMonthlyRoomsUseCase,
-    private val getLeaseRoomsUseCase: GetLeaseRoomsUseCase
+    private val getLeaseRoomsUseCase: GetLeaseRoomsUseCase,
+    private val getDetailUseCase: GetDetailUseCase
 ): ViewModel() {
     fun getRooms(changeListData: (List<MainResponseModel>) -> Unit) {
         viewModelScope.launch {
@@ -52,6 +55,19 @@ class MainViewModel @Inject constructor(
                 }
                 .onFailure {
                     Log.d("TAG", "getLeaseRooms Failure ${it.message}")
+                }
+        }
+    }
+
+    fun getDetail(id: Int, changeData: (DetailResponseModel) -> Unit) {
+        viewModelScope.launch {
+            getDetailUseCase(id)
+                .onSuccess {
+                    changeData(it)
+                    Log.d("TAG", "getDetail: $it")
+                }
+                .onFailure {
+                    Log.d("TAG", "getDetail: ${it.message}")
                 }
         }
     }
