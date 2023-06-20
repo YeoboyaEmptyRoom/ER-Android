@@ -29,6 +29,7 @@ class CurrentListDetailActivity : AppCompatActivity() {
                 "Main" -> startActivity(Intent(this@CurrentListDetailActivity, MainActivity::class.java))
                 "MapDetail" -> startActivity(Intent(this@CurrentListDetailActivity, MapDetailActivity::class.java))
             }
+            finish()
         }
     }
 

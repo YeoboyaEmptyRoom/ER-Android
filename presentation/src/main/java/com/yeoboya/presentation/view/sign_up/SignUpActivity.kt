@@ -22,6 +22,7 @@ class SignUpActivity : AppCompatActivity() {
 
         binding.backArrow.setOnClickListener {
             startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+            finish()
         }
 
         binding.signupButton.setOnClickListener {
@@ -33,6 +34,7 @@ class SignUpActivity : AppCompatActivity() {
             )
             userViewModel.signUp(signUpRequestModel) {
                 startActivity(Intent(this@SignUpActivity, SignInActivity::class.java))
+                finish()
             }
         }
 

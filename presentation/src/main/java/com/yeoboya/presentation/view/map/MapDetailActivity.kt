@@ -43,6 +43,7 @@ class MapDetailActivity : AppCompatActivity() {
 
         binding.mapDetailBackArrow.setOnClickListener {
             startActivity(Intent(this@MapDetailActivity, MapActivity::class.java))
+            finish()
         }
 
         binding.filter.setOnClickListener {
@@ -132,6 +133,7 @@ class MapDetailActivity : AppCompatActivity() {
                 intent.putExtra("beforePage", "MapDetail")
                 intent.putExtra("id", item.id)
                 startActivity(intent)
+                finish()
             }
         }
     }

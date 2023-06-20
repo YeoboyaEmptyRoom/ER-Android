@@ -74,6 +74,7 @@ class MainActivity : AppCompatActivity() {
                 intent.putExtra("beforePage", "Main")
                 intent.putExtra("id", item.id)
                 startActivity(intent)
+                finish()
             }
         }
     }

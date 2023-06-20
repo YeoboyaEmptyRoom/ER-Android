@@ -27,11 +27,13 @@ class SignInActivity : AppCompatActivity() {
             )
             userViewModel.signIn(signInBody) {
                 startActivity(Intent(this@SignInActivity, MainActivity::class.java))
+                finish()
             }
         }
 
         binding.signupText.setOnClickListener {
             startActivity(Intent(this@SignInActivity, SignUpActivity::class.java))
+            finish()
         }
     }
 }

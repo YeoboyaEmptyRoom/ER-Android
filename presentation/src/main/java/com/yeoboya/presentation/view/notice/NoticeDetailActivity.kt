@@ -17,6 +17,7 @@ class NoticeDetailActivity : AppCompatActivity() {
 
         binding.detailBackArrow.setOnClickListener {
             startActivity(Intent(this@NoticeDetailActivity, NoticeActivity::class.java))
+            finish()
         }
 
         initLoading()
