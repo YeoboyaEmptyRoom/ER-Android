@@ -35,8 +35,8 @@ class CurrentListDetailActivity : AppCompatActivity() {
     fun initLoading() {
         mainViewModel.getDetail(intent.getIntExtra("id", 0)) {
             Glide.with(this).load(intent.getIntExtra("roomImage", R.drawable.home)).into(binding.horizontalCurrentImage1)
-            binding.moneyText.text = "${it.rent_type} 123"
-            binding.priceText.text = "${it.rent_type} 123"
+            binding.moneyText.text = "${it.rent_type} ${it.price}"
+            binding.priceText.text = "${it.rent_type} ${it.price}"
             binding.rulerText.text = "${it.size.toInt()}평"
             binding.roomText.text = it.room_type
             binding.floorText.text = "${it.floor}층"
